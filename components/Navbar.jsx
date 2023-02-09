@@ -25,10 +25,11 @@ const navs = [
 	},
 ];
 
-const Navbar = () => {
+const Navbar = ({ title }) => {
 	const [nav, setNav] = useState(false);
 	const [color, setColor] = useState("transparent");
 	const [textColor, setTextColor] = useState("white");
+	const [text, setText] = useState(title);
 
 	const handleNav = () => {
 		setNav((p) => !p);
@@ -37,11 +38,13 @@ const Navbar = () => {
 	useEffect(() => {
 		const changeColor = () => {
 			if (window.scrollY >= 90) {
-				setColor("#eefa");
+				setColor("#eeef");
 				setTextColor("#000");
+				setText("Pnoi");
 			} else {
 				setColor("transparent");
 				setTextColor("#fff");
+				setText(title);
 			}
 		};
 
@@ -61,7 +64,7 @@ const Navbar = () => {
 						style={{ color: `${textColor}` }}
 						className="font-bold text-4xl"
 					>
-						Pnoi
+						{text || "Title"}
 					</h1>
 				</Link>
 				<ul

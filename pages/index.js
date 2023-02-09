@@ -23,8 +23,8 @@ export default function Home() {
 				<link rel="icon" href="/favicon.ico" />
 			</Head>
 			<Hero
-				heading="Breathe In, Breathe Out"
-				message="Easing diagnosis and monitoring of Asthma with sounds of breath."
+				heading="Pnoi-phone"
+				message="A biomedical device for detecting and monitoring asthma using breath sounds"
 			/>
 			<Slider slides={slides} />
 		</>
