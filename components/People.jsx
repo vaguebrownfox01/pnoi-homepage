@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 import { RxLink1 as LinkIcon } from "react-icons/rx";
+import SectionContainer from "./SectionContainer";
 
 const people = [
 	{
@@ -10,7 +11,7 @@ const people = [
 		position: "Associate Professor",
 		place: "EE Dept., IISc, Bangalore",
 		link: "",
-		image: "/pfp.png",
+		image: "/pkg.png",
 		type: "CO-PI",
 		when: "present",
 	},
@@ -20,7 +21,7 @@ const people = [
 		position: "HOD & Professor",
 		place: "Pulmonary Medicine Dept., St.John's Medical College, Bangalore",
 		link: "",
-		image: "/pfp.png",
+		image: "/uma.png",
 		type: "CO-PI",
 		when: "present",
 	},
@@ -30,7 +31,7 @@ const people = [
 		position: "Associate Professor",
 		place: "EE Dept., IISc, Bangalore",
 		link: "",
-		image: "/pfp.png",
+		image: "/dips.png",
 		type: "CO-PI",
 		when: "present",
 	},
@@ -40,7 +41,7 @@ const people = [
 		position: "Junior Research Fellow",
 		place: "SPIRE Lab, IISc, Bangalore",
 		link: "",
-		image: "/pfp.png",
+		image: "/fauv.jpg",
 		type: "Core Team",
 		when: "present",
 	},
@@ -50,7 +51,7 @@ const people = [
 		position: "Junior Research Fellow",
 		place: "SPIRE Lab, IISc, Bangalore",
 		link: "",
-		image: "/pfp.png",
+		image: "/shk.png",
 		type: "Core Team",
 		when: "present",
 	},
@@ -142,14 +143,13 @@ const support = [];
 const People = () => {
 	return (
 		<>
-			<h1 id="people" className="text-2xl font-bold text-center p-4">
-				People
-			</h1>
-			<div className="flex flex-wrap justify-around">
-				{people.map((p) => (
-					<Card key={p.id + p.name} {...p} />
-				))}
-			</div>
+			<SectionContainer heading={"People"}>
+				<div className="flex flex-wrap justify-around pb-12">
+					{people.map((p) => (
+						<Card key={p.id + p.name} {...p} />
+					))}
+				</div>
+			</SectionContainer>
 		</>
 	);
 };

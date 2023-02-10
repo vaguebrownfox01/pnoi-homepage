@@ -12,7 +12,7 @@ const Signal = () => {
 
 		const nLayers = 4;
 		const mSamples = 1024;
-		const kBumps = 8;
+		const kBumps = 12;
 
 		const svg = d3
 			.select(svgRef.current)

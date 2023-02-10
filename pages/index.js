@@ -1,5 +1,6 @@
 import About from "@/components/About";
 import Contact from "@/components/Contact";
+import Funding from "@/components/Funding";
 import Hero from "@/components/Hero";
 import People from "@/components/People";
 import { Inter } from "@next/font/google";
@@ -28,6 +29,7 @@ export default function Home() {
 			/>
 			{/* <Slider slides={slides} /> */}
 			<About />
+			<Funding />
 			<People />
 			<Contact />
 		</>
