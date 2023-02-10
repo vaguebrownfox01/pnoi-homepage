@@ -7,7 +7,7 @@ const Funding = () => {
 	return (
 		<div>
 			<SectionContainer heading={"Support and Funding"}>
-				<div className="flex justify-center items-center p-4">
+				<div className="flex flex-wrap justify-center items-center p-4">
 					<Image
 						className="mx-4"
 						src={"/spr-logo.png"}
