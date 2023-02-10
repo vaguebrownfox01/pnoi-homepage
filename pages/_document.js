@@ -4,6 +4,20 @@ export default function Document() {
 	return (
 		<Html lang="en">
 			<Head>
+				<link rel="icon" type="image/png" href="/pnoi-logo.png" />
+				<meta
+					name="viewport"
+					content="width=device-width, initial-scale=1"
+				/>
+				<meta name="theme-color" content="#3d3d3d" />
+				<meta
+					name="description"
+					content="A biomedical device for detecting and monitoring asthma using breath sounds"
+				/>
+				<link
+					rel="apple-touch-icon"
+					href="%PUBLIC_URL%/pnoi-logo.png"
+				/>
 				<link rel="preconnect" href="https://fonts.googleapis.com" />
 				<link
 					rel="preconnect"
