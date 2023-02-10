@@ -6,7 +6,7 @@ const Contact = () => {
 		<>
 			<div
 				id="contact"
-				className="flex items-center h-[12rem] mt-12 bg-gray-100"
+				className="flex items-center h-[8rem] mt-12 bg-gray-100"
 			>
 				<h1>SPIRE Lab</h1>
 			</div>

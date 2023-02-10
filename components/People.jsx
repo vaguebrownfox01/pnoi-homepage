@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 import { RxLink1 as LinkIcon } from "react-icons/rx";
+import SectionContainer from "./SectionContainer";
 
 const people = [
 	{
@@ -142,14 +143,13 @@ const support = [];
 const People = () => {
 	return (
 		<>
-			<h1 id="people" className="text-2xl font-bold text-center p-4">
-				People
-			</h1>
-			<div className="flex flex-wrap justify-around">
-				{people.map((p) => (
-					<Card key={p.id + p.name} {...p} />
-				))}
-			</div>
+			<SectionContainer heading={"People"}>
+				<div className="flex flex-wrap justify-around">
+					{people.map((p) => (
+						<Card key={p.id + p.name} {...p} />
+					))}
+				</div>
+			</SectionContainer>
 		</>
 	);
 };
