@@ -1,9 +1,9 @@
-import Head from "next/head";
-import Image from "next/image";
-import { Inter } from "@next/font/google";
+import About from "@/components/About";
+import Contact from "@/components/Contact";
 import Hero from "@/components/Hero";
-import Slider from "@/components/Slider";
-import { slides } from "@/data/slides";
+import People from "@/components/People";
+import { Inter } from "@next/font/google";
+import Head from "next/head";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -26,7 +26,10 @@ export default function Home() {
 				heading="Pnoi-phone"
 				message="A biomedical device for detecting and monitoring asthma using breath sounds"
 			/>
-			<Slider slides={slides} />
+			{/* <Slider slides={slides} /> */}
+			<About />
+			<People />
+			<Contact />
 		</>
 	);
 }
