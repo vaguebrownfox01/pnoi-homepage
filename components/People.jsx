@@ -11,7 +11,7 @@ const people = [
 		position: "Associate Professor",
 		place: "EE Dept., IISc, Bangalore",
 		link: "",
-		image: "/pfp.png",
+		image: "/pkg.png",
 		type: "CO-PI",
 		when: "present",
 	},
@@ -21,7 +21,7 @@ const people = [
 		position: "HOD & Professor",
 		place: "Pulmonary Medicine Dept., St.John's Medical College, Bangalore",
 		link: "",
-		image: "/pfp.png",
+		image: "/uma.png",
 		type: "CO-PI",
 		when: "present",
 	},
@@ -31,7 +31,7 @@ const people = [
 		position: "Associate Professor",
 		place: "EE Dept., IISc, Bangalore",
 		link: "",
-		image: "/pfp.png",
+		image: "/dips.png",
 		type: "CO-PI",
 		when: "present",
 	},
@@ -41,7 +41,7 @@ const people = [
 		position: "Junior Research Fellow",
 		place: "SPIRE Lab, IISc, Bangalore",
 		link: "",
-		image: "/pfp.png",
+		image: "/fauv.jpg",
 		type: "Core Team",
 		when: "present",
 	},
@@ -51,7 +51,7 @@ const people = [
 		position: "Junior Research Fellow",
 		place: "SPIRE Lab, IISc, Bangalore",
 		link: "",
-		image: "/pfp.png",
+		image: "/shk.png",
 		type: "Core Team",
 		when: "present",
 	},
@@ -144,7 +144,7 @@ const People = () => {
 	return (
 		<>
 			<SectionContainer heading={"People"}>
-				<div className="flex flex-wrap justify-around">
+				<div className="flex flex-wrap justify-around pb-12">
 					{people.map((p) => (
 						<Card key={p.id + p.name} {...p} />
 					))}
