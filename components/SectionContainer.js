@@ -9,7 +9,7 @@ const SectionContainer = ({ heading, children }) => {
 			>
 				{heading || "Insert section heading"}
 			</h1>
-			<div className="block mx-8 mb-8 rounded-xl border-b-[1px] border-grey-500/100">
+			<div className="block mx-8 mb-8 pb-8 rounded-xl border-b-[1px] border-grey-500/100">
 				{children}
 			</div>
 		</div>

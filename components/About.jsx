@@ -15,7 +15,7 @@ const About = () => {
 						height={img_size}
 						alt={"pnoi-illustration"}
 					/>
-					<p className="text-lg md:text-lg xl:text-2xl text-slate-700] md:px-8">
+					<p className="text-lg md:text-lg xl:text-xl text-slate-700] md:px-8">
 						&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Pnoi-phone
 						is a device that records breath sounds from the mouth
 						and chest and sends it to the Pnoi-phone app on a
