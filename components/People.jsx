@@ -147,7 +147,7 @@ const People = () => {
 			</h1>
 			<div className="flex flex-wrap justify-around">
 				{people.map((p) => (
-					<Card {...p} />
+					<Card key={p.id + p.name} {...p} />
 				))}
 			</div>
 		</>
