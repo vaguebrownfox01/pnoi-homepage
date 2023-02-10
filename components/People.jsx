@@ -36,9 +36,9 @@ const Card = ({ name, image, position, type, place, when, link }) => {
 			</div>
 			<p className="text-xs font-semibold text-center">{position}</p>
 			<p className="text-xs font-normal text-center">{place}</p>
-			<span className="flex flex-grow justify-between items-end pt-8 px-2">
-				<p className="text-xs font-semibold text-blue-900">{when}</p>
-				<Link href={link} about="_blank">
+			<span className="flex flex-grow justify-end items-end pt-8 px-2">
+				{/* <p className="text-xs font-semibold text-blue-900">{when}</p> */}
+				<Link href={link} target="_blank" rel="noopener noreferrer">
 					<LinkIcon className="text-blue-800" size={16} />
 				</Link>
 			</span>
