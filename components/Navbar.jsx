@@ -14,8 +14,8 @@ const navs = [
 		link: "/",
 	},
 	{
-		id: "team",
-		label: "Team",
+		id: "people",
+		label: "People",
 		link: "/",
 	},
 	{
@@ -27,8 +27,6 @@ const navs = [
 
 const Navbar = ({ title }) => {
 	const [nav, setNav] = useState(false);
-	const [color, setColor] = useState("transparent");
-	const [textColor, setTextColor] = useState("white");
 	const [text, setText] = useState(title);
 
 	const handleNav = () => {
@@ -37,14 +35,10 @@ const Navbar = ({ title }) => {
 
 	useEffect(() => {
 		const changeColor = () => {
-			if (window.scrollY >= 90) {
-				setColor("#eeef");
-				setTextColor("#000");
-				setText("Pnoi");
-			} else {
-				setColor("transparent");
-				setTextColor("#fff");
+			if (window.scrollY <= 90) {
 				setText(title);
+			} else {
+				setText("Pnoi");
 			}
 		};
 
@@ -55,22 +49,14 @@ const Navbar = ({ title }) => {
 
 	return (
 		<div
-			style={{ backgroundColor: `${color}` }}
-			className="fixed left-0 top-0 w-full z-10 ease-in duration-300"
+			// style={{ backgroundColor: `${color}` }}
+			className="fixed left-0 top-0 w-full z-10 ease-in duration-300 bg-gradient-to-b from-slate-300 to-slate-200/0"
 		>
-			<div className="max-w-[1240] m-auto flex justify-between items-center p-4 text-white">
+			<div className="max-w-[1240] m-auto flex justify-between items-center p-4 text-slate-700">
 				<Link href="/">
-					<h1
-						style={{ color: `${textColor}` }}
-						className="font-bold text-4xl"
-					>
-						{text || "Title"}
-					</h1>
+					<h1 className="font-bold text-2xl">{text || "Title"}</h1>
 				</Link>
-				<ul
-					style={{ color: `${textColor}` }}
-					className="hidden sm:flex"
-				>
+				<ul className="hidden sm:flex">
 					{navs.map((e) => {
 						return (
 							<li key={e.id} className="p-4">
@@ -82,21 +68,23 @@ const Navbar = ({ title }) => {
 				{/* Mobile button */}
 				<div
 					onClick={handleNav}
-					className="block sm:hidden z-10"
-					style={{ color: `${textColor}` }}
+					className="block sm:hidden z-10 text-slate-700"
 				>
 					{!nav ? (
 						<AiOutlineMenu style={{ color: "inherit" }} size={28} />
 					) : (
-						<AiOutlineClose style={{ color: "#fff" }} size={28} />
+						<AiOutlineClose
+							style={{ color: "inherit" }}
+							size={28}
+						/>
 					)}
 				</div>
 				{/* Mobile menu */}
 				<div
 					className={
 						nav
-							? "sm:hidden absolute top-0 left-0 bottom-0 flex justify-center items-center w-full h-screen bg-black text-center ease-in duration-300"
-							: "sm:hidden absolute top-0 left-[-100%] bottom-0 flex justify-center items-center w-full h-screen bg-black text-center ease-in duration-300"
+							? "sm:hidden absolute top-0 left-0 bottom-0 flex justify-center items-center w-full h-screen bg-slate-200 text-center ease-in duration-300"
+							: "sm:hidden absolute top-0 left-[-100%] bottom-0 flex justify-center items-center w-full h-screen bg-slate-200 text-center ease-in duration-300"
 					}
 				>
 					<ul>
