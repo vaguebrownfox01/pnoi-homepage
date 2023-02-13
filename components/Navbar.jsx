@@ -58,12 +58,18 @@ const Navbar = ({ title }) => {
 		>
 			<div className="max-w-[1240] m-auto flex justify-between items-center p-4 text-slate-700">
 				<Link href="/">
-					<h1 className="font-bold text-2xl">{text || "Title"}</h1>
+					<h1 className="font-bold text-2xl hover:text-blue-400 ease-in duration-300">
+						{text || "Title"}
+					</h1>
 				</Link>
 				<ul className="hidden sm:flex">
 					{navs.map((e) => {
 						return (
-							<li key={e.id} href={e.link} className="p-4">
+							<li
+								key={e.id}
+								onClick={handleNav}
+								className="p-4 hover:text-blue-400 ease-in duration-300"
+							>
 								<Link href={e.link}>{e.label}</Link>
 							</li>
 						);
@@ -94,7 +100,11 @@ const Navbar = ({ title }) => {
 					<ul>
 						{navs.map((e) => {
 							return (
-								<li href={e.link} key={e.id} className="p-4">
+								<li
+									key={e.id}
+									onClick={handleNav}
+									className="p-4 hover:text-blue-400 ease-in duration-300"
+								>
 									<Link href={e.link}>{e.label}</Link>
 								</li>
 							);
