@@ -1,28 +1,26 @@
+import Image from "next/image";
 import Link from "next/link";
 import React from "react";
+import Vrx from "./Vrx";
 
 const Contact = () => {
+	const img_size = 128;
 	return (
 		<>
 			<div
 				id="contact"
-				className="flex items-center h-[8rem] mt-12 bg-gray-100"
+				className="flex flex-col justify-center items-center  mt-12 p-8 bg-gray-100"
 			>
-				<h1>SPIRE Lab</h1>
+				<Image
+					className="mx-4"
+					src={"/spr-logo.png"}
+					width={img_size * 0.8}
+					height={img_size * 0.8}
+					alt={"iisc-logo"}
+				/>
+				<h1 className="font-bold text-lg pt-0 mt-0">SPIRE Lab</h1>
 			</div>
-			<span className="flex justify-center items-center font-mono bg-black text-white font-bold text-xs">
-				Made with&nbsp;
-				<p className="text-red-500 text-xs">&hearts;&nbsp;</p>
-				by&nbsp;
-				<Link
-					href={`${"https://github.com/vaguebrownfox01"}`}
-					color="inherit"
-					target="_blank"
-					rel="noopener noreferrer"
-				>
-					{"vrx"}
-				</Link>
-			</span>
+			<Vrx />
 		</>
 	);
 };

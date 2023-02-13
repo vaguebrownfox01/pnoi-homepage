@@ -1,6 +1,7 @@
 import About from "@/components/About";
 import Contact from "@/components/Contact";
 import Funding from "@/components/Funding";
+import Gallery from "@/components/Gallery";
 import Hero from "@/components/Hero";
 import People from "@/components/People";
 import { Inter } from "@next/font/google";
@@ -28,8 +29,10 @@ export default function Home() {
 				message="A biomedical device for detecting and monitoring asthma using breath sounds"
 			/>
 			{/* <Slider slides={slides} /> */}
+
 			<About />
 			<Funding />
+			<Gallery />
 			<People />
 			<Contact />
 		</>

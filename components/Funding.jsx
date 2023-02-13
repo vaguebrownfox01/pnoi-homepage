@@ -10,9 +10,9 @@ const Funding = () => {
 				<div className="flex flex-wrap justify-center items-center p-4">
 					<Image
 						className="mx-4"
-						src={"/spr-logo.png"}
-						width={img_size * 0.8}
-						height={img_size * 0.8}
+						src={"/iisc-logo.png"}
+						width={img_size * 1.8}
+						height={img_size * 1.8}
 						alt={"iisc-logo"}
 					/>
 					<Image
@@ -21,13 +21,6 @@ const Funding = () => {
 						width={img_size}
 						height={img_size}
 						alt={"dst-logo"}
-					/>
-					<Image
-						className="mx-4"
-						src={"/iisc-logo.png"}
-						width={img_size * 1.4}
-						height={img_size * 1.4}
-						alt={"iisc-logo"}
 					/>
 				</div>
 			</SectionContainer>

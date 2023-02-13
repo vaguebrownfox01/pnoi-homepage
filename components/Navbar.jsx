@@ -6,22 +6,22 @@ const navs = [
 	{
 		id: "about",
 		label: "About",
-		link: "/",
+		link: "/#about",
 	},
 	{
 		id: "gallery",
 		label: "Gallery",
-		link: "/",
+		link: "/#gallery",
 	},
 	{
 		id: "people",
 		label: "People",
-		link: "/",
+		link: "/#people",
 	},
 	{
 		id: "contact",
 		label: "Contact",
-		link: "/",
+		link: "/#contact",
 	},
 ];
 
@@ -32,6 +32,10 @@ const Navbar = ({ title }) => {
 	const handleNav = () => {
 		setNav((p) => !p);
 	};
+
+	function handleScroll() {
+		window.scrollTo(this.link);
+	}
 
 	useEffect(() => {
 		const changeColor = () => {
@@ -59,7 +63,7 @@ const Navbar = ({ title }) => {
 				<ul className="hidden sm:flex">
 					{navs.map((e) => {
 						return (
-							<li key={e.id} className="p-4">
+							<li key={e.id} href={e.link} className="p-4">
 								<Link href={e.link}>{e.label}</Link>
 							</li>
 						);
@@ -90,7 +94,7 @@ const Navbar = ({ title }) => {
 					<ul>
 						{navs.map((e) => {
 							return (
-								<li key={e.id} className="p-4">
+								<li href={e.link} key={e.id} className="p-4">
 									<Link href={e.link}>{e.label}</Link>
 								</li>
 							);
