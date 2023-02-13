@@ -8,7 +8,7 @@ import SectionContainer from "./SectionContainer";
 const People = () => {
 	return (
 		<>
-			<SectionContainer heading={"People"}>
+			<SectionContainer id={"people"} heading={"People"}>
 				<div className="flex flex-wrap justify-around pb-12">
 					{people.map((p) => (
 						<Card key={p.id + p.name} {...p} />

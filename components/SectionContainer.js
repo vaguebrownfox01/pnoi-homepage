@@ -1,10 +1,10 @@
 import React from "react";
 
-const SectionContainer = ({ heading, children }) => {
+const SectionContainer = ({ id, heading, children }) => {
 	return (
 		<div>
 			<h1
-				id="people"
+				id={id}
 				className="text-2xl font-bold text-center p-4  text-slate-700"
 			>
 				{heading || "Insert section heading"}

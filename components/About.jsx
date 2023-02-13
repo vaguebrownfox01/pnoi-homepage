@@ -6,7 +6,7 @@ const About = () => {
 	const img_size = 420;
 	return (
 		<>
-			<SectionContainer heading={"About"}>
+			<SectionContainer id={"about"} heading={"About"}>
 				<div className="flex justify-start items-center mb-8 flex-wrap sm:flex-nowrap">
 					<Image
 						className="sm:mx-auto mb-2"
