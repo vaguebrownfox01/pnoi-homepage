@@ -76,10 +76,10 @@ const Signal = () => {
 		await path
 			.data(randomize)
 			.transition()
-			.delay((_, i) => (nLayers - i) * 0)
-			.duration((_, i) => (nLayers - i + 1) * 6000)
 			.attr("d", area)
 			.attr("fill", () => zColor(Math.random()))
+			.delay((_, i) => (nLayers - i) * 0)
+			.duration((_, i) => (nLayers - i + 1) * 6000)
 			.end();
 	}
 
