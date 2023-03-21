@@ -10,9 +10,9 @@ const Signal = () => {
 		let height = 500;
 		let width = 1000;
 
-		const nLayers = 4;
+		const nLayers = 8;
 		const mSamples = 1024;
-		const kBumps = 12;
+		const kBumps = 16;
 
 		const svg = d3
 			.select(svgRef.current)
