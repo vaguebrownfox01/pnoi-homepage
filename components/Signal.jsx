@@ -10,9 +10,9 @@ const Signal = () => {
 		let height = 500;
 		let width = 1000;
 
-		const nLayers = 4;
+		const nLayers = 8;
 		const mSamples = 1024;
-		const kBumps = 12;
+		const kBumps = 16;
 
 		const svg = d3
 			.select(svgRef.current)
@@ -76,10 +76,10 @@ const Signal = () => {
 		await path
 			.data(randomize)
 			.transition()
-			.delay((_, i) => (nLayers - i) * 0)
-			.duration((_, i) => (nLayers - i + 1) * 6000)
 			.attr("d", area)
 			.attr("fill", () => zColor(Math.random()))
+			.delay((_, i) => (nLayers - i) * 0)
+			.duration((_, i) => (nLayers - i + 1) * 6000)
 			.end();
 	}
 
